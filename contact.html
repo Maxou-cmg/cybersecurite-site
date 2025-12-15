@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez-nous pour toute question sur la cybersécurité. Formulaire de contact disponible.">
+    <meta name="keywords" content="contact, cybersécurité, formulaire">
+    <title>Nous Contacter - Cybersécurité</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><img src="logo.svg" alt="Logo M.C" class="logo-img"> Cybersécurité</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="reglementation.html">Réglementation</a></li>
+                <li><a href="menaces.html">Menaces</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="article-header">
+            <h1>Nous Contacter</h1>
+            <p class="subtitle">Vos questions sur la cybersécurité nous intéressent</p>
+        </header>
+
+        <section class="content-section">
+            <p>Vous avez des questions, des remarques ou vous souhaitez discuter de cybersécurité ? N'hésitez pas à nous contacter via le formulaire ci-dessous ou directement par email.</p>
+
+            <div class="contact-container">
+                <div class="contact-form-section">
+                    <h2>Formulaire de Contact</h2>
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Objet de votre message">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Votre message..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Envoyer</button>
+                    </form>
+                    <p id="form-status" style="margin-top: 1rem; display: none;"></p>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Informations de Contact</h2>
+                    <div class="info-box">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@cybersecurite-site.fr">info@cybersecurite-site.fr</a></p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>À propos du site</h3>
+                        <p>Ce site est une ressource éducative dédiée à la cybersécurité. Il couvre les principes fondamentaux, les menaces informatiques, la réglementation internationale et les bonnes pratiques en matière de sécurité informatique.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Réseaux sociaux</h3>
+                        <p>Suivez-nous sur les réseaux sociaux pour les dernières actualités en cybersécurité.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation">
+            <a href="index.html" class="btn">← Retour à l'accueil</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Site de Cybersécurité. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const statusDiv = document.getElementById('form-status');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Validation simple
+            if (!name || !email || !subject || !message) {
+                statusDiv.style.color = '#e74c3c';
+                statusDiv.textContent = 'Tous les champs sont obligatoires.';
+                statusDiv.style.display = 'block';
+                return;
+            }
+
+            // Envoi du formulaire via mailto (sur ce site statique)
+            const mailtoLink = `mailto:info@cybersecurite-site.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`De: ${name}\nEmail: ${email}\n\n${message}`)}`;
+            
+            statusDiv.style.color = '#27ae60';
+            statusDiv.textContent = 'Merci ! Votre message a été préparé. Cliquez sur le lien mailto qui s\'ouvre pour l\'envoyer.';
+            statusDiv.style.display = 'block';
+            
+            // Optionnel : ouvrir le client mail
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
