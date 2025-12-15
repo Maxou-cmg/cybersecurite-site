@@ -2,9 +2,11 @@
 function initDarkMode() {
     const toggle = document.getElementById('dark-mode-toggle');
     const isDark = localStorage.getItem('darkMode') === 'true';
+    const variant = localStorage.getItem('darkVariant') || 'violet';
     
     if (isDark) {
         document.body.classList.add('dark-mode');
+        document.body.setAttribute('data-theme', variant);
         if (toggle) toggle.innerHTML = '☀️';
     }
 
@@ -13,7 +15,42 @@ function initDarkMode() {
             document.body.classList.toggle('dark-mode');
             const isDarkNow = document.body.classList.contains('dark-mode');
             localStorage.setItem('darkMode', isDarkNow);
+            // ensure theme-variant is applied when enabling dark mode
+            const curVariant = localStorage.getItem('darkVariant') || 'violet';
+            if (isDarkNow) document.body.setAttribute('data-theme', curVariant);
+            else document.body.removeAttribute('data-theme');
             toggle.innerHTML = isDarkNow ? '☀️' : '🌙';
+        });
+    }
+}
+
+// Theme variant selector (violet/classic)
+function initThemeVariant() {
+    // create button if not present
+    if (!document.getElementById('theme-variant-toggle')) {
+        const btn = document.createElement('button');
+        btn.id = 'theme-variant-toggle';
+        btn.className = 'theme-variant-toggle';
+        btn.setAttribute('aria-label', 'Changer la variante du thème sombre');
+        btn.textContent = localStorage.getItem('darkVariant') === 'classic' ? 'Classic' : 'Violet';
+
+        // insert near dark-mode-toggle if exists, else append to nav
+        const darkToggle = document.getElementById('dark-mode-toggle');
+        if (darkToggle && darkToggle.parentNode) {
+            darkToggle.parentNode.insertBefore(btn, darkToggle.nextSibling);
+        } else {
+            const nav = document.querySelector('.nav-menu');
+            if (nav) nav.appendChild(btn);
+        }
+
+        btn.addEventListener('click', () => {
+            const current = localStorage.getItem('darkVariant') || 'violet';
+            const next = current === 'violet' ? 'classic' : 'violet';
+            localStorage.setItem('darkVariant', next);
+            btn.textContent = next === 'classic' ? 'Classic' : 'Violet';
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.setAttribute('data-theme', next);
+            }
         });
     }
 }
