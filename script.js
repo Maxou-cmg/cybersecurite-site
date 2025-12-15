@@ -31,8 +31,12 @@ function initThemeVariant() {
         const btn = document.createElement('button');
         btn.id = 'theme-variant-toggle';
         btn.className = 'theme-variant-toggle';
-        btn.setAttribute('aria-label', 'Changer la variante du thème sombre');
-        btn.textContent = localStorage.getItem('darkVariant') === 'classic' ? 'Classic' : 'Violet';
+        const currentVariant = localStorage.getItem('darkVariant') === 'classic' ? 'classic' : 'violet';
+        const emoji = currentVariant === 'classic' ? '🌑' : '🌌';
+        const title = currentVariant === 'classic' ? 'Variante Classic (noir)' : 'Variante Violet';
+        btn.textContent = emoji;
+        btn.setAttribute('aria-label', title);
+        btn.setAttribute('title', title);
 
         // insert near dark-mode-toggle if exists, else append to nav
         const darkToggle = document.getElementById('dark-mode-toggle');
@@ -47,7 +51,11 @@ function initThemeVariant() {
             const current = localStorage.getItem('darkVariant') || 'violet';
             const next = current === 'violet' ? 'classic' : 'violet';
             localStorage.setItem('darkVariant', next);
-            btn.textContent = next === 'classic' ? 'Classic' : 'Violet';
+            const nextEmoji = next === 'classic' ? '🌑' : '🌌';
+            const nextTitle = next === 'classic' ? 'Variante Classic (noir)' : 'Variante Violet';
+            btn.textContent = nextEmoji;
+            btn.setAttribute('title', nextTitle);
+            btn.setAttribute('aria-label', nextTitle);
             if (document.body.classList.contains('dark-mode')) {
                 document.body.setAttribute('data-theme', next);
             }
@@ -144,6 +152,7 @@ function initAnalytics() {
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     initDarkMode();
+    initThemeVariant();
     initLanguageToggle();
     initScrollToTop();
     initIntersectionObserver();
