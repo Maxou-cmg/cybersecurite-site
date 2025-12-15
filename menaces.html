@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analyse détaillée des principales menaces informatiques : virus, malware, ransomware, phishing, spyware.">
+    <meta name="keywords" content="menaces, malware, virus, phishing, ransomware, cybersécurité">
+    <meta property="og:title" content="Menaces Informatiques">
+    <meta property="og:description" content="Guide complet des principales menaces cybersécurité">
     <title>Analyse des principales menaces informatiques</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Menaces Informatiques",
+      "inLanguage": "fr"
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
     <nav class="navbar">
         <div class="container">
             <div class="logo"><img src="logo.svg" alt="Logo M.C" class="logo-img"> Cybersécurité</div>
@@ -15,13 +29,17 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="presentation.html">Présentation</a></li>
                 <li><a href="reglementation.html">Réglementation</a></li>
-                <li><a href="menaces.html">Menaces</a></li>
+                <li><a href="menaces.html" class="active">Menaces</a></li>
                 <li><a href="ressources.html">Ressources</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Basculer le mode sombre">🌙</button>
+                <button id="lang-toggle" class="lang-toggle" aria-label="Changer la langue">EN</button>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <header class="article-header">
             <h1>Analyse des principales menaces informatiques dans les environnements numériques</h1>
             <p class="subtitle">Comprendre les risques et leurs impacts</p>

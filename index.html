@@ -3,18 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site éducatif complet sur la cybersécurité : principes, menaces, réglementation et solutions modernes.">
+    <meta name="keywords" content="cybersécurité, sécurité informatique, protection données, menaces, RGPD">
+    <meta name="author" content="Maxou-cmg">
+    <meta property="og:title" content="Cybersécurité - Accueil">
+    <meta property="og:description" content="Découvrez les principes, menaces et solutions de la cybersécurité moderne">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Maxou-cmg.github.io/cybersecurite-site/">
+    <meta property="og:image" content="https://Maxou-cmg.github.io/cybersecurite-site/logo.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cybersécurité - Accueil">
+    <meta name="twitter:description" content="Découvrez les principes, menaces et solutions de la cybersécurité moderne">
     <title>Cybersécurité - Accueil</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Site de Cybersécurité",
+      "url": "https://Maxou-cmg.github.io/cybersecurite-site/",
+      "description": "Site éducatif complet sur la cybersécurité",
+      "inLanguage": "fr"
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
     <nav class="navbar">
         <div class="container">
-            <div class="logo"><img src="logo.svg" alt="Logo M.Cen" class="logo-img"> Cybersécurité</div>
+            <div class="logo"><img src="logo.svg" alt="Logo M.C" class="logo-img"> Cybersécurité</div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="presentation.html">Présentation</a></li>
                 <li><a href="reglementation.html">Réglementation</a></li>
+                <li><a href="menaces.html">Menaces</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Basculer le mode sombre">🌙</button>
+                <button id="lang-toggle" class="lang-toggle" aria-label="Changer la langue">EN</button>
+            </ul>
+        </div>
+    </nav>
                 <li><a href="menaces.html">Menaces</a></li>
             </ul>
         </div>
@@ -27,7 +59,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-content">
         <section class="home-section">
             <h2>📋 Sommaire</h2>
             <p>Accédez aux différentes sections du site pour approfondir vos connaissances en cybersécurité :</p>
