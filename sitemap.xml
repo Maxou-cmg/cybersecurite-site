@@ -35,5 +35,21 @@
     <lastmod>2025-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>  <url>
+    <loc>https://Maxou-cmg.github.io/cybersecurite-site/ressources.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>bi-weekly</changefreq>
+    <priority>0.7</priority>
   </url>
-</urlset>
+  <url>
+    <loc>https://Maxou-cmg.github.io/cybersecurite-site/faq.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://Maxou-cmg.github.io/cybersecurite-site/blog.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url></urlset>

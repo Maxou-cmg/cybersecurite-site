@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de cybersécurité - Articles et actualités sur la sécurité informatique moderne.">
+    <meta name="keywords" content="blog, cybersécurité, articles, actualités">
+    <meta property="og:title" content="Blog Cybersécurité">
+    <meta property="og:description" content="Articles et actualités de cybersécurité">
+    <meta property="og:type" content="blog">
+    <title>Blog - Cybersécurité</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog Cybersécurité",
+      "inLanguage": "fr"
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><img src="logo.svg" alt="Logo M.C" class="logo-img"> Cybersécurité</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="reglementation.html">Réglementation</a></li>
+                <li><a href="menaces.html">Menaces</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Basculer le mode sombre">🌙</button>
+                <button id="lang-toggle" class="lang-toggle" aria-label="Changer la langue">EN</button>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero hero-small">
+        <div class="hero-content">
+            <h1>Blog Cybersécurité</h1>
+            <p>Articles, actualités et conseils de sécurité informatique</p>
+        </div>
+    </header>
+
+    <main class="container" id="main-content">
+        <section class="blog-section">
+            <div class="blog-posts">
+                <article class="blog-post">
+                    <div class="blog-header">
+                        <h2><a href="#post1">Top 10 des Meilleures Pratiques Cybersécurité pour 2025</a></h2>
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 15 Dec 2025</span>
+                            <span class="blog-author">✍️ Maxou-cmg</span>
+                            <span class="blog-category">🏷️ Bonnes Pratiques</span>
+                        </div>
+                    </div>
+                    <p class="blog-excerpt">Découvrez les dix pratiques essentielles pour sécuriser votre infrastructure informatique. De la gestion des mots de passe à l'authentification multi-facteur, nous vous guide...</p>
+                    <a href="#post1" class="blog-read-more">Lire plus →</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="blog-header">
+                        <h2><a href="#post2">L'Impact du RGPD sur la Cybersécurité</a></h2>
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 12 Dec 2025</span>
+                            <span class="blog-author">✍️ Maxou-cmg</span>
+                            <span class="blog-category">🏷️ Réglementation</span>
+                        </div>
+                    </div>
+                    <p class="blog-excerpt">Le RGPD a transformé le paysage de la cybersécurité en Europe. Comprenez comment cette réglementation affecte votre stratégie de sécurité des données...</p>
+                    <a href="#post2" class="blog-read-more">Lire plus →</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="blog-header">
+                        <h2><a href="#post3">Nouvelles Tendances des Menaces en Décembre 2025</a></h2>
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 10 Dec 2025</span>
+                            <span class="blog-author">✍️ Maxou-cmg</span>
+                            <span class="blog-category">🏷️ Menaces</span>
+                        </div>
+                    </div>
+                    <p class="blog-excerpt">Les cyber-menaces évoluent constamment. Cet article analyse les tendances récentes en matière de ransomware, de phishing et de vulnerabilités zero-day...</p>
+                    <a href="#post3" class="blog-read-more">Lire plus →</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="blog-header">
+                        <h2><a href="#post4">Intelligence Artificielle et Cybersécurité</a></h2>
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 8 Dec 2025</span>
+                            <span class="blog-author">✍️ Maxou-cmg</span>
+                            <span class="blog-category">🏷️ Technologie</span>
+                        </div>
+                    </div>
+                    <p class="blog-excerpt">L'IA révolutionne la cybersécurité. Découvrez comment l'apprentissage automatique et les réseaux de neurones améliorent la détection des menaces...</p>
+                    <a href="#post4" class="blog-read-more">Lire plus →</a>
+                </article>
+            </div>
+
+            <aside class="blog-sidebar">
+                <div class="sidebar-newsletter">
+                    <h3>📧 Newsletter</h3>
+                    <p>Inscrivez-vous pour recevoir nos derniers articles</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required aria-label="Adresse email">
+                        <button type="submit" class="btn-subscribe">S'abonner</button>
+                    </form>
+                    <p class="newsletter-message" style="display:none; margin-top: 1rem; color: #667eea;">✅ Merci pour votre inscription!</p>
+                </div>
+
+                <div class="sidebar-categories">
+                    <h3>📂 Catégories</h3>
+                    <ul>
+                        <li><a href="#category-practices">Bonnes Pratiques (5)</a></li>
+                        <li><a href="#category-threats">Menaces (8)</a></li>
+                        <li><a href="#category-regulations">Réglementation (4)</a></li>
+                        <li><a href="#category-tech">Technologie (6)</a></li>
+                        <li><a href="#category-tutorials">Tutoriels (3)</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-popular">
+                    <h3>🔥 Articles Populaires</h3>
+                    <ul>
+                        <li><a href="#popular1">Guide Complet du RGPD</a></li>
+                        <li><a href="#popular2">Protéger votre PME</a></li>
+                        <li><a href="#popular3">Les bases de la Cryptographie</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>À propos</h4>
+                <p>Un site éducatif complet sur la cybersécurité moderne, ses enjeux et ses solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="presentation.html">Présentation</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@cybersecurite.fr</p>
+                <p>📱 +33 1 23 45 67 89</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">🔗</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="GitHub">💻</a>
+                </div>
+            </div>
+        </div>
+        <button id="scroll-to-top" class="scroll-to-top" aria-label="Retour en haut">↑</button>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
