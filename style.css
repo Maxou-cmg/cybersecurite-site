@@ -37,6 +37,15 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
 }
 
 .nav-menu {
