@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+main {
+    background: white;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* Article Header */
+.article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.article-header h1 {
+    font-size: 2.2rem;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Home Section */
+.home-section h2 {
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.home-section > p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Table of Contents Grid */
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.toc-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.toc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+}
+
+.toc-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.toc-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.toc-card a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.toc-card a:hover {
+    text-decoration: underline;
+}
+
+.toc-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Info Section */
+.info-section {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #764ba2;
+}
+
+.info-section h2 {
+    color: #764ba2;
+    margin-bottom: 1rem;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+.content-section h2 {
+    color: #667eea;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.content-section h3 {
+    color: #764ba2;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-section h4 {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    color: #555;
+    text-align: justify;
+}
+
+/* Tools Container */
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.tool-card {
+    background: #f5f7fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #764ba2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tool-card h4 {
+    color: #667eea;
+    margin-bottom: 0.8rem;
+}
+
+.tool-card p {
+    color: #666;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+/* Definitions */
+.definitions {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.definitions dl {
+    margin: 0;
+}
+
+.definitions dt {
+    color: #667eea;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.definitions dt:first-child {
+    margin-top: 0;
+}
+
+.definitions dd {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Conclusion Section */
+.conclusion-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.conclusion-section p {
+    font-size: 1.05rem;
+    color: #333;
+}
+
+/* Navigation Buttons */
+.navigation {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .toc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-container {
+        grid-template-columns: 1fr;
+    }
+
+    .article-header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
