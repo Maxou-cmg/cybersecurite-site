@@ -1,0 +1,4 @@
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Rechercher dans le site...">
+    <button onclick="searchText()">Rechercher</button>
+</div>

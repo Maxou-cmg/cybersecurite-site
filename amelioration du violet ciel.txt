@@ -1,0 +1,65 @@
+:root {
+    --bg: #f8fafc;
+    --text: #020617;
+    --primary: #6d28d9;   /* violet */
+    --secondary: #c4b5fd; /* violet ciel */
+    --card: #e5e7eb;
+}
+
+.dark-theme {
+    --bg: #1b1035;
+    --text: #e9d5ff;
+    --primary: #a78bfa;
+    --secondary: #c084fc;
+    --card: #2e1a47;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+header, footer {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+
+section {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+h1, h2, h3 {
+    color: var(--primary);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--secondary);
+    font-weight: bold;
+}
